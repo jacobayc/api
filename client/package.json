@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "proxy": "https://api-sv.netlify.app/",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

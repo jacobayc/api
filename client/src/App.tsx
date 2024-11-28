@@ -38,7 +38,9 @@ function App() {
   const [apiResponse, setApiResponse] = useState<ApiResponse | null>(null);
 
   useEffect(() => {
-    fetch('https://3874-121-162-171-98.ngrok-free.app/api/hello', {
+    const PROXY = '/proxy';
+    const URL = `${PROXY}/api/hello`
+    fetch(URL, {
       headers: {
         'ngrok-skip-browser-warning': 'true',
         'Content-Type': 'application/json',
