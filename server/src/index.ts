@@ -2,9 +2,23 @@ import express from 'express'
 import cors from 'cors'
 
 const app = express()
-const port = 5000
+const port = 3000
+const host = '87f8-211-118-142-83.ngrok-free.app'
 
-app.use(cors())
+const corsOptions = {
+  origin: [
+    'http://211.118.142.83:3003', 
+    'http://localhost:3003',
+    'https://*.ngrok-free.app',
+    'https://api-sv.netlify.app',
+    `${host}`
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.get('/api/hello', (req, res) => {

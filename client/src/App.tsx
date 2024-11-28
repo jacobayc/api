@@ -38,9 +38,14 @@ function App() {
   const [apiResponse, setApiResponse] = useState<ApiResponse | null>(null);
 
   useEffect(() => {
-    fetch('/api/hello')
+    fetch('https://87f8-211-118-142-83.ngrok-free.app/api/hello', {
+      headers: {
+        'ngrok-skip-browser-warning': 'true'
+      }
+    })
       .then(response => response.json())
       .then((data : ApiResponse ) => setApiResponse(data))
+      .catch(error => console.error('Error fetching data:', error));
   }, [])
 
   return (
