@@ -3,7 +3,8 @@ import cors from 'cors'
 
 const app = express()
 const port = 3000
-const host = '87f8-211-118-142-83.ngrok-free.app'
+const host = 'https://3874-121-162-171-98.ngrok-free.app'
+console.log(host ,"현재 host")
 
 const corsOptions = {
   origin:'*',
@@ -12,7 +13,7 @@ const corsOptions = {
   allowedHeaders: ['Content-Type', 'Authorization','ngrok-skip-browser-warning']
 }
 
-app.use(cors(corsOptions))
+app.use(cors({ origin: '*' }));
 app.use(express.json())
 
 app.get('/api/hello', (req, res) => {
