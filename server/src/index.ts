@@ -6,16 +6,10 @@ const port = 3000
 const host = '87f8-211-118-142-83.ngrok-free.app'
 
 const corsOptions = {
-  origin: [
-    'http://211.118.142.83:3003', 
-    'http://localhost:3003',
-    'https://*.ngrok-free.app',
-    'https://api-sv.netlify.app',
-    `${host}`
-  ],
+  origin:'*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization','ngrok-skip-browser-warning']
 }
 
 app.use(cors(corsOptions))

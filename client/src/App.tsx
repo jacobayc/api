@@ -38,9 +38,11 @@ function App() {
   const [apiResponse, setApiResponse] = useState<ApiResponse | null>(null);
 
   useEffect(() => {
-    fetch('https://87f8-211-118-142-83.ngrok-free.app/api/hello', {
+    fetch('https://3874-121-162-171-98.ngrok-free.app/api/hello', {
       headers: {
-        'ngrok-skip-browser-warning': 'true'
+        'ngrok-skip-browser-warning': 'true',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       }
     })
       .then(response => response.json())
