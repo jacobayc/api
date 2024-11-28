@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "proxy": "https://api-sv.netlify.app/",
+  "proxy": "https://3874-121-162-171-98.ngrok-free.app/",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
